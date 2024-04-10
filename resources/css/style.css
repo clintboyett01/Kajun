@@ -599,94 +599,93 @@ footer p {
 
 /* new */
 :root {
-  --themeBG: #1d1e22;
-  --themeFont: #efefef;
-}
-
-.menu {
-  width: 50%;
-  margin: 0 auto;
-  padding: 10px 30px;
-  background: var(--themeBG);
-  border: 3px solid var(--themeFont);
-  box-shadow: 1px 1px 3px black;
-  color: var(--themeFont);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.itemWrap {
-  margin-bottom: 10px;
-}
-
-/*Displaying flex and justifying content space between to take up the width of the box*/
-.itemNameWrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.itemName {
-  font-size: 1.8em;
-}
-
-/*The Radial Gradient background is used as the dots. The position being at 90% helps line up the dots with the price which is just a little smaller than the description. Flex-grow: 2 makes the middle spread out to take up the remaining space. */
-.itemMiddle {
-  vertical-align: bottom;
-  background-image: radial-gradient(var(--themeFont) 1px, var(--themeBG) 0px);
-  background-size: 8px 8px;
-  background-repeat: repeat-x;
-  background-position: left 90%;
-  flex-grow: 2;
-}
-
-.itemPrice {
-  font-size: 1.6em;
-  padding-top:5px;
-}
-
-.itemDescription {
-  font-size: 1.1em;
-  font-style: italic;
-}
-
-.event-box {
+    --themeBG: #1d1e22;
+    --themeFont: #efefef;
+  }
+  
+  .menu {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 30px;
+    background: var(--themeBG);
+    border: 3px solid var(--themeFont);
+    box-shadow: 1px 1px 3px black;
+    color: var(--themeFont);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .itemWrap {
+    margin-bottom: 10px;
+  }
+  
+  .itemNameWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .itemName {
+    font-size: 1.8em;
+  }
+  
+  .itemMiddle {
+    vertical-align: bottom;
+    background-image: radial-gradient(var(--themeFont) 1px, var(--themeBG) 0px);
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+    background-position: left 90%;
+    flex-grow: 2;
+  }
+  
+  .itemPrice {
+    font-size: 1.6em;
+    padding-top: 5px;
+  }
+  
+  .itemDescription {
+    font-size: 1.1em;
+    font-style: italic;
+  }
+  
+  .event-box {
     background-color: #f4f4f4;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    }
-    
-    .event-box:hover {
+  }
+  
+  .event-box:hover {
     transform: translateY(-5px);
-    }
-    
-    .event-description {
+  }
+  
+  .event-description {
     color: #555;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
-    }
-    
-    .event-time {
+  }
+  
+  .event-time {
     color: #e67e22;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    }
-    
-    .event-box h3 {
+  }
+  
+  .event-box h3 {
     color: #333;
     font-size: 24px;
     margin-bottom: 10px;
-    }
-    
-    .event-box .btn {
+  }
+  
+  .event-box .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #e67e22;
@@ -694,20 +693,55 @@ h1 {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+  }
+  
+  .event-box .btn:hover {
+    background-color: #d35400;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu {
+      width: 100%;
+      padding: 10px 15px;
+    }
+  
+    .itemName {
+      font-size: 1.4em;
+    }
+  
+    .itemPrice {
+      font-size: 1.2em;
+    }
+  
+    .itemDescription {
+      font-size: 1em;
+    }
+  
+    .event-box {
+      padding: 15px;
+    }
+  
+    .event-box h3 {
+      font-size: 20px;
+    }
+  
+    .event-description {
+      font-size: 14px;
+    }
+  
+    .event-time {
+      font-size: 12px;
+    }
+  }
+/* other new */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
     }
     
-    .event-box .btn:hover {
-    background-color: #d35400;
+    .gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 10px;
-      }
-      
-      .gallery img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
